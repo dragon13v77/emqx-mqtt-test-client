@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="UTF-8">
+	<title>MQTT Client</title>
+	<script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
+</head>
+<body>
+<h1 style="text-align: center">MQTT Test Client</h1>
+
+<p>
+<h3>Publish message to predefined topic `test_topic`</h3>
+<input type="text" name="message" id="message">
+<button onclick="publish(document.getElementById('message').value)">Publish message</button>
+</p>
+<hr>
+
+<p>
+
+<h3>Subscribe to custom topic</h3>
+<input type="text" id="subscribeTopic">
+<button onclick="subscribe(document.getElementById('subscribeTopic').value)">Subscribe to topic</button>
+</p>
+<hr>
+
+<p>
+
+<h3>Publish message to custom topic</h3>
+
+<p>
+	<label>Custom topic</label>&nbsp;<input type="text" id="customTopicName">
+</p>
+
+<p>
+	<input type="text" id="customMessage">
+	<button onclick="publishMessageToCustomTopic(document.getElementById('customTopicName').value, document.getElementById('customMessage').value)">Publish message to custom
+		topic
+	</button>
+</p>
+</p>
+<hr>
+
+<p>
+	<h3>Unsubscribe from the topic</h3>
+	<input type="text" id="unsubscribeTopic">
+	<button onclick="unsubscribe(document.getElementById('unsubscribeTopic').value)">Unsubscribe from topic</button>
+</p>
+<hr>
+
+<script src="client.js"></script>
+</body>
+</html>
